@@ -10,14 +10,21 @@ import {
   Stack,
   StackDivider,
   Text,
+  Box,
 } from '@chakra-ui/react';
 import Nav from './components/Nav';
 import cart from './assets/icon-cart.svg';
 import CartIcon from './icons/Cart';
+import Carousel from './components/Carousel';
+
+import image1 from './assets/image-product-1.jpg';
+import image2 from './assets/image-product-2.jpg';
+import image3 from './assets/image-product-3.jpg';
+import image4 from './assets/image-product-4.jpg';
 
 function App() {
   return (
-    <Container maxWidth="container.md">
+    <Container maxWidth="container.lg">
       <Stack divider={<StackDivider />} spacing={0}>
         <Nav />
         <Stack
@@ -26,7 +33,9 @@ function App() {
           alignItems="center"
           justifyContent="center"
         >
-          <Text flex={1}>Parte izquierda</Text>
+          <Box flex={1}>
+            <Carousel images={[image1, image2, image3, image4]} />
+          </Box>
           <Stack flex={1} spacing={6}>
             <Stack>
               <Text
